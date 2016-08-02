@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo $1;
+x-terminal-emulator -e "vim $1"
+
