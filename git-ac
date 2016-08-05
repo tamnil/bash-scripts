@@ -1,9 +1,8 @@
 #!/bin/sh
 if [ -z $1 ]; then
     echo 'missing message'
-    echo 'USAGE: git-acp <message>'
+    echo 'USAGE: git-ac <message>
 else
     git add .
     git commit -m '$1'
-    git push
 fi
