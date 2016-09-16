@@ -1,0 +1,16 @@
+#!/bin/bash
+
+### read key:
+echo "save scripts to /usr/local/bin?"
+read -p "Are you sure?[n]" -n 1 -r
+echo ""
+
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    # "Yes" Action
+    echo "yes selected"
+    sudo ln -s /opt/scripts/bash/* /usr/local/bin/
+else
+    # "No" Action
+    echo "Aborted"
+fi

@@ -1,0 +1,11 @@
+#!/bin/zsh
+sessions=$(tmux list-sessions | grep -v attached |grep -Po '^\d*')
+IFS='
+'
+# echo "${sessions}"
+for i in `tmux list-sessions | grep -v attached |grep -Po '^\d*'`; do
+    echo "killing -> $i";
+    tmux kill-session -t $i
+done
+
+
